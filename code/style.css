@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #FFDADA;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #7B0000;
+    padding: 30px;
+}
+
+.logo h2 {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.logo h2:hover {
+    transform: scale(1.2);
+    color: #FFDADA;
+}
+
+.logo span {
+    color: #FFDADA;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo span:hover {
+    color: white;
+}
+
+nav ul{
+    display: flex;
+    gap: 0 30px;
+    list-style: none;
+}
+
+nav ul a {
+    font-style: none;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+    color: #FFDADA;
+}
+
+.conversor {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 16px;
+}
+
+.conversor-chld {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px 0;
+    border-radius: 16px;
+    background-color: #935959;
+    padding: 36px;
+}
+
+.conversor-chld p, label {
+    font-size: 18px;
+}
+
+.opcoes label {
+    cursor: pointer;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #FFDADA;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color:#7B0000; /* Azul ao focar */
+    box-shadow: 0 0 5px #FFDADA;
+}
+
+input::placeholder {
+    color: #7B0000;
+}
+
+.btn-convert { 
+    border-style: none;
+    padding: 10px 18px;
+    background-color: #7B0000;
+    color: #FFDADA;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-convert:hover {
+    background-color: #FFDADA;
+    color: #7B0000;
+}
+
+.input-num {
+    margin-bottom: 16px;
+}
+
+.result-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.conversor-aviso {
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+    padding: 36px;
+    text-align: justify;
+    gap: 16px;
+    background-color: #935959;
+}
+
+.conversor-aviso h2 {
+    margin-bottom: 10px;
+    color: #7B0000;
+
+}
+
+.conversor p {
+    font-size: 18px;
+}
+
+.input-container {
+    display: none;
+    margin-top: 10px;
+}
+
+.result-container {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Aqui Você pode colocar a parte de vídeo e documentação na estilização,pra ficar organizado e em sequência. :}*/
+
+footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px;
+    align-items: center;
+    background-color: #7B0000;
+}
+
+.ftr-links {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 16px 0;
+    
+}
+
+.ftr-links div {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ftr-links div:hover {
+    transform: scale(1.1);
+}
+
+.ftr-links div a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+.ftr-links div a:hover {
+    color: #FFDADA;
+}
+
+.ftr-links div span {
+    font-size: 14px;
+}
+
+.ftr-links svg {
+    height: 36px;
+    width: 36px;
+    fill: #FFDADA;
+    margin-right: 16px;
+}
+
+.ftr-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 32px;
+}
+
+.img-colab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-colab img {
+    height: 160px;
+    border-radius: 50%;
+    margin: 16px;
+}
+
+
+
+.img-colab p {
+    font-weight: 600;
+    font-size: 14px;
+}
+
