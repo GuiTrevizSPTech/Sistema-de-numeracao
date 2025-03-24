@@ -18,14 +18,16 @@
         <nav class="nav-bar">
             <ul>
                 <li class="nav-links"><a href="#conversor">Conversor</a></li>
-                <li class="nav-links"><a href="">Vídeos</a></li>
-                <li class="nav-links"><a href="#doc">Documentação</a></li>
+                <li class="nav-links"><a href="#area_video">Vídeos</a></li>
+                <li class="nav-links"><a href="#area_doc">Documentação</a></li>
                 <li class="nav-links"><a href="#sobre">Sobre</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="conversor">
+    <!-- Conversor de bases numéricas -->
+
+    <div id="conversor">
         <div class="conversor-chld">
             <h2>Conversor de Bases Numéricas</h2>
 
@@ -58,7 +60,66 @@
         </div>
     </div>
 
-    <footer class="sobre">
+    <!-- Aréa de vídeo explicativo -->
+    <div class="titulo_video">
+        <h2>Vídeo sobre conversão de bases</h2>
+    </div>
+
+    <div id="area_video">
+        <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6W5hWB2E5aE?si=KGJLAI8LQItLQ_rL"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <!-- Documentação -->
+    <!-- Aréa de vídeo explicativo -->
+    <div class="titulo_doc">
+        <h2>Documentação sobre o conversor</h2>
+    </div>
+
+    <div id="area_doc">
+        <div class="texto_doc">
+            <h2>Conversão de bases:</h2>
+            <p>
+                A conversão de bases numéricas é um conceito fundamental na computação e na matemática, permitindo
+                representar números em diferentes sistemas. Os principais sistemas são:
+            </p>
+
+            <p>
+            <b> Decimal (Base 10):</b> Utiliza os dígitos de 0 a 9 e é o sistema mais comum no dia a dia.
+            </p>
+
+            <p>
+                <b>Binário (Base 2):</b> Usa apenas 0 e 1, sendo essencial para computadores, pois é a linguagem dos
+                processadores.
+            </p>
+
+            <p>
+                <b>Octal (Base 8):</b> Emprega os dígitos de 0 a 7 e é utilizado em algumas aplicações computacionais, como
+                permissões de arquivos em sistemas Unix.
+            </p>
+
+            <p>
+                <b>Hexadecimal (Base 16):</b> Utiliza os dígitos de 0 a 9 e as letras A a F (representando 10 a 15), sendo
+                amplamente empregado na programação, especialmente em endereços de memória e cores em HTML/CSS.
+            </p>
+
+            <p>
+                A conversão entre essas bases pode ser feita utilizando divisões sucessivas (para converter decimal para
+                outra base) e multiplicação de potências da base (para converter para decimal). Para conversões diretas
+                entre bases menores (como binário e hexadecimal), pode-se agrupar os dígitos binários em blocos de 3
+                (para octal) ou 4 (para hexadecimal).
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer e sobre nós -->
+
+    <footer id="sobre">
         <section class="ftr-links">
             <div>
                 <a href="https://www.instagram.com/lira.vj/" target="_blank">
@@ -95,52 +156,15 @@
         <section class="ftr-img">
             <div class="img-colab">
                 <img src="./img/Joao-img.png" alt="Lira's img">
-                <p>Jão Lira</p>
+                <p>João Vitor Lira</p>
             </div>
             <div class="img-colab">
                 <img src="./img/gui_img.png" alt="Trevizan's img">
-                <p>Gui Treviz</p>
+                <p>Guilherme Trevizan</p>
             </div>
         </section>
     </footer>
-
-    <script>
-        let selectedBase = '';
-
-        function showInput(radio) {
-            selectedBase = radio.value; // Guarda a base escolhida
-            document.getElementById("input-container").style.display = "block"; // Exibe o input
-        }
-
-        function convert() {
-            let inputValue = document.getElementById("number-input").value.trim();
-
-            if (!inputValue) {
-                alert("Digite um número!");
-                return;
-            }
-
-            let scrollPosition = window.scrollY;
-
-            // Converte para decimal
-            let decimalValue = parseInt(inputValue, selectedBase);
-            if (isNaN(decimalValue)) {
-                alert("Número inválido para essa base!");
-                return;
-            }
-
-            // Converte para outras bases
-            document.getElementById("result").innerHTML = `
-                <p>Binário: <strong>${decimalValue.toString(2)}</strong></p>
-                <p>Octal: <strong>${decimalValue.toString(8)}</strong></p>
-                <p>Decimal: <strong>${decimalValue.toString(10)}</strong></p>
-                <p>Hexadecimal: <strong>${decimalValue.toString(16).toUpperCase()}</strong></p>
-            `;
-
-            window.scrollTo(0, scrollPosition);
-        }
-    </script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

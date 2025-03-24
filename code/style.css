@@ -6,7 +6,7 @@
 
 body {
     font-family: sans-serif;
-    background-color: #FFDADA;
+    background-color: white;
     color: white;
 }
 
@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #7B0000;
+    background-color: #502F4C;
     padding: 30px;
 }
 
@@ -24,16 +24,16 @@ header {
 
 .logo h2:hover {
     transform: scale(1.2);
-    color: #FFDADA;
+    color: white;
 }
 
 .logo span {
-    color: #FFDADA;
+    color: white;
     transition: color 0.3s ease-in-out;
 }
 
 .logo span:hover {
-    color: white;
+    color: #C8B8DB;
 }
 
 nav ul{
@@ -51,14 +51,15 @@ nav ul a {
 }
 
 nav ul a:hover {
-    color: #FFDADA;
+    color: #C8B8DB;
 }
 
-.conversor {
+#conversor {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 16px;
+    margin: 200px;
 }
 
 .conversor-chld {
@@ -68,8 +69,9 @@ nav ul a:hover {
     align-items: center;
     gap: 16px 0;
     border-radius: 16px;
-    background-color: #935959;
+    background-color: #70587C;
     padding: 36px;
+    margin: 30px;
 }
 
 .conversor-chld p, label {
@@ -83,26 +85,26 @@ nav ul a:hover {
 input[type="number"], input[type="text"] {
     width: 100%;
     padding: 10px;
-    border: 2px solid #FFDADA;
+    border: 2px solid white;
     border-radius: 5px;
     font-size: 16px;
     outline: none;
 }
 
 input[type="number"]:focus, input[type="text"]:focus {
-    border-color:#7B0000; /* Azul ao focar */
-    box-shadow: 0 0 5px #FFDADA;
+    border-color:#502F4C; /* Azul ao focar */
+    box-shadow: 0 0 5px white;
 }
 
 input::placeholder {
-    color: #7B0000;
+    color: #502F4C;
 }
 
 .btn-convert { 
     border-style: none;
     padding: 10px 18px;
-    background-color: #7B0000;
-    color: #FFDADA;
+    background-color: #502F4C;
+    color: white;
     font-weight: 600;
     font-size: 16px;
     border-radius: 5px;
@@ -111,8 +113,8 @@ input::placeholder {
 }
 
 .btn-convert:hover {
-    background-color: #FFDADA;
-    color: #7B0000;
+    background-color: #C8B8DB;
+    color: #502F4C;
 }
 
 .input-num {
@@ -128,6 +130,7 @@ input::placeholder {
 }
 
 .conversor-aviso {
+    margin: 30px;
     border-radius: 16px;
     display: flex;
     align-items: center;
@@ -136,12 +139,12 @@ input::placeholder {
     padding: 36px;
     text-align: justify;
     gap: 16px;
-    background-color: #935959;
+    background-color: #70587C;
 }
 
 .conversor-aviso h2 {
     margin-bottom: 10px;
-    color: #7B0000;
+    color: #C8B8DB;
 
 }
 
@@ -161,12 +164,12 @@ input::placeholder {
 
 /* Aqui Você pode colocar a parte de vídeo e documentação na estilização,pra ficar organizado e em sequência. :}*/
 
-footer {
+#sobre {
     display: flex;
     justify-content: space-evenly;
     padding: 15px;
     align-items: center;
-    background-color: #7B0000;
+    background-color: #502F4C;
 }
 
 .ftr-links {
@@ -197,7 +200,7 @@ footer {
 }
 
 .ftr-links div a:hover {
-    color: #FFDADA;
+    color: #C8B8DB;
 }
 
 .ftr-links div span {
@@ -207,7 +210,7 @@ footer {
 .ftr-links svg {
     height: 36px;
     width: 36px;
-    fill: #FFDADA;
+    fill: white;
     margin-right: 16px;
 }
 
@@ -237,3 +240,51 @@ footer {
     font-size: 14px;
 }
 
+
+
+#area_video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px;
+    height: 500px;
+}
+
+.titulo_video{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    background-color: #502F4C;
+}
+
+.titulo_videos, h2{
+    margin: 20px;
+}
+
+#area_doc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo_doc{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 70px;
+    background-color: #502F4C;
+}
+
+.texto_doc{
+    margin: 60px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px;
+    padding: 36px;
+    text-align: justify;
+    gap: 16px;
+    background-color: #70587C;
+}
